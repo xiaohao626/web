@@ -9,14 +9,14 @@
 function add() {
   var args = Array.prototype.slice.call(arguments);
 
-  var adder = function () {
-    args.push(...arguments);
+  var adder = function (...args2) {
+    args.push(args2);
     return adder;
   }
 
   adder.toString = function () {
     return args.reduce((result, item) => {
-      return result + item;
+      return +result + +item;
     })
   }
   
