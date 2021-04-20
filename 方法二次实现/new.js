@@ -17,7 +17,7 @@ function personalNew() {
   return obj;
 }
 
-function Parent(name, age) {
+function Parent(name, age){
   this.name = name;
   this.age = age
 }
