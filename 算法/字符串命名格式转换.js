@@ -15,3 +15,13 @@ function cssStyle2DomStyle(sName) {
 }
 
 console.log(cssStyle2DomStyle(str));
+
+// 正则方式
+function cssStyle2DomStyleByReg(sName) {
+    const reg = /\w{1}(-\w{1})/g;
+    return sName.replace(reg, function(match, p1) {
+        return p1.split('-')[1].toUpperCase();
+    })
+}
+
+console.log(cssStyle2DomStyleByReg(str));
