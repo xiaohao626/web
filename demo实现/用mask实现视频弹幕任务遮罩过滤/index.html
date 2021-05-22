@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .content {
+      width: 500px;
+      height: 200px;
+      background: burlywood;
+      mask: linear-gradient(90deg, transparent, #283593);
+      -webkit-mask: linear-gradient(90deg, transparent, #283593);
+    }
+  </style>
+</head>
+<body>
+  <!-- 网站中可以看到的视频任务不被弹幕遮挡，核心就是弹幕层上使用了mask属性，视频播放时弹幕层上mask属性内容会不断变化，实际是使用了svg图片 -->
+  <div class="content"></div>
+</body>
+</html>
