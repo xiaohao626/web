@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .class {
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="class"></div>
+  <div class="class"></div>
+  <div class="class"></div>
+  <script>
+    /**
+     * 写一个tranverse函数，输出所有页面宽度和高度大于50像素的节点
+     */
+
+     function tranverse() {
+      //  var elems = document.all;
+       var elems = document.getElementsByTagName('*');
+       var result = [];
+      
+       for (var i = 0, len = elems.length;i < len; i++) {
+         var currElem = elems[i];
+         var width = parseInt(currElem.style.width) || currElem.offsetWidth;
+         var height = parseInt(currElem.style.width) || currElem.offsetWidth;
+
+         if (width > 50 && height > 50) {
+            result.push(currElem);
+         }
+       }
+
+       return result;
+     }
+
+     tranverse();
+  </script>
+</body>
+</html>
